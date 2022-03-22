@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  height: auto;
+  
+  width: 100%;
+  max-width: 200px;
+  padding: .5em;
+  
+}
+
+.card-wrapper {
+  background-color: blue;
+  width: 10em;
+  display: flex;
+  flex-direction: column;
+}
+
