@@ -1,0 +1,36 @@
+@import 'index.scss';
+
+
+h1{
+
+  color: $base-white;
+  font-size: 4em;
+  font-family: Ezcar;
+  margin: 0;
+  line-height: .9;
+}
+
+h3{
+
+  color: $base-white;
+  font-family: Ezcar;
+  margin: 0;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 1em;
+}
+
+
+
+.counter-container {
+
+  color: $base-white;
+  font-family: Ezcar;
+  font-size: 1.5em;
+}

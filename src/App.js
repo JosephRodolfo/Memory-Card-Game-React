@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
 import React, { useState, useEffect } from "react";
 import "../src/styles/css/App.css";
+import "../src/styles/css/index.css";
 import Card from "./card.js";
-import Counter from "./Counter.js";
+import Nav from "./Nav.js";
 import artist from "./assets/artist.jpg";
 import baronness from "./assets/baronness.jpg";
 import botanist from "./assets/botanist.jpg";
@@ -25,11 +25,11 @@ import thinker from "./assets/thinker.jpg";
 import president from "./assets/president.jpg";
 import queen from "./assets/queen.jpg";
 import sculptor from "./assets/sculptor.jpg";
-const guessedCharacters = [];
 
 const App = () => {
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(-1);
   const [lossOrWin, setResult] = useState(false);
+  const [highScore, setHighScore] = useState(0);
 
   const [guessedCharactersList, setGuess] = useState([]);
   const [items, setList] = useState([
@@ -74,92 +74,74 @@ const App = () => {
   };
 
   let handleGuess = (e) => {
-    if (e.target.parentNode.className === "card-wrapper") {
-      let chosenCharacter = e.target.parentNode.childNodes[1].innerText;
+    if (
+      e.target.parentNode.parentNode.className === "card-wrapper" ||
+      e.target.parentNode.className === "img-wrapper" ||
+      e.target.parentNode.className === "clickable-all"
+    ) {
+      let chosenCharacter =
+        e.target.parentNode.parentNode.childNodes[1].innerText;
       const changes = guessedCharactersList.concat(chosenCharacter);
+
       setGuess(changes);
-      console.log(changes);
     }
   };
 
- /* useEffect(() => {
-   const changes = [];
-      setGuess(changes);
+  useEffect(() => {
     setScore(0);
+  }, [lossOrWin]);
 
-  }, [lossOrWin]);*/
-
+  let checkForHighScore = (original, newScore) => {
+    if (newScore > original) {
+      setHighScore(newScore);
+    }
+  };
 
   useEffect(() => {
-
     let mostRecent = guessedCharactersList[guessedCharactersList.length - 1];
-    if (
-      guessedCharactersList
-        .splice(0, guessedCharactersList.length - 1)
-        .includes(mostRecent)
-    ) {
-      
-      alert("You Lost!");
-      setResult(!lossOrWin)
+    let spliced = guessedCharactersList.slice(
+      0,
+      guessedCharactersList.length - 1
+    );
+
+    if (spliced.includes(mostRecent)) {
+      checkForHighScore(highScore, score);
+
+      setScore(-1);
+      setResult(!lossOrWin);
+
+      setGuess([]);
     } else {
       handleShuffle();
-      setScore(score+1);
-
+      setScore(score + 1);
     }
   }, [guessedCharactersList]);
 
-  /*
-
-function guessContentFunction (){
-
-    if (e.target.parentNode.className === "card-wrapper") {
-      let chosenCharacter = e.target.parentNode.childNodes[1].innerText;
-      setScore(score + 1);
-      const changes = guessedCharactersList.concat(chosenCharacter);
-      setGuess(changes);
-    
-      if ((checkForMatch(guessedCharactersList, chosenCharacter))) {
-        alert("You Lost");
-      } else {
-        handleShuffle();
-      }
-    }
-  }*/
   return (
     <div className="App">
-      <button onClick={handleShuffle}>Randomize</button>
-      <Counter number={score} />
+      <Nav score={score} highScore={highScore} />
       <div className="all-cards-container" onClick={handleGuess}>
-        <div className="card-row">
-          <Card title={items[0].name} source={items[0].image} />
-          <Card title={items[1].name} source={items[1].image} />
-          <Card title={items[2].name} source={items[2].image} />
-          <Card title={items[3].name} source={items[3].image} />
-          <Card title={items[4].name} source={items[4].image} />
-          <Card title={items[5].name} source={items[5].image} />
-          <Card title={items[6].name} source={items[6].image} />
-        </div>
-        <div className="card-row">
-          <Card title={items[7].name} source={items[7].image} />
-
-          <Card title={items[8].name} source={items[8].image} />
-          <Card title={items[9].name} source={items[9].image} />
-          <Card title={items[10].name} source={items[10].image} />
-          <Card title={items[11].name} source={items[11].image} />
-          <Card title={items[12].name} source={items[12].image} />
-          <Card title={items[13].name} source={items[13].image} />
-        </div>
-        <div className="card-row">
-          <Card title={items[14].name} source={items[14].image} />
-
-          <Card title={items[15].name} source={items[15].image} />
-
-          <Card title={items[16].name} source={items[16].image} />
-          <Card title={items[17].name} source={items[17].image} />
-          <Card title={items[18].name} source={items[18].image} />
-          <Card title={items[19].name} source={items[19].image} />
-          <Card title={items[20].name} source={items[20].image} />
-        </div>
+        <Card title={items[0].name} source={items[0].image} />
+        <Card title={items[1].name} source={items[1].image} />
+        <Card title={items[2].name} source={items[2].image} />
+        <Card title={items[3].name} source={items[3].image} />
+        <Card title={items[4].name} source={items[4].image} />
+        <Card title={items[5].name} source={items[5].image} />
+        <Card title={items[6].name} source={items[6].image} />
+        <Card title={items[7].name} source={items[7].image} />
+        <Card title={items[8].name} source={items[8].image} />
+        <Card title={items[9].name} source={items[9].image} />
+        <Card title={items[10].name} source={items[10].image} />
+        <Card title={items[11].name} source={items[11].image} />
+        <Card title={items[12].name} source={items[12].image} />
+        <Card title={items[13].name} source={items[13].image} />
+        <Card title={items[14].name} source={items[14].image} />
+        <Card title={items[15].name} source={items[15].image} />
+        <Card title={items[16].name} source={items[16].image} />
+        <Card title={items[17].name} source={items[17].image} />
+        <Card title={items[18].name} source={items[18].image} />
+        <Card title={items[19].name} source={items[19].image} />
+        <Card title={items[20].name} source={items[20].image} />
       </div>
     </div>
   );

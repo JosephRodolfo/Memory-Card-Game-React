@@ -17,4 +17,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-/*# sourceMappingURL=index.css.map */
+h1 {
+  color: whitesmoke;
+  font-size: 4em;
+  font-family: Ezcar;
+  margin: 0;
+  line-height: 0.9;
+}
+
+h3 {
+  color: whitesmoke;
+  font-family: Ezcar;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 1em;
+}
+
+.counter-container {
+  color: whitesmoke;
+  font-family: Ezcar;
+  font-size: 1.5em;
+}
+
+/*# sourceMappingURL=nav.css.map */
