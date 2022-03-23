@@ -25,11 +25,11 @@ import thinker from "./assets/thinker.jpg";
 import president from "./assets/president.jpg";
 import queen from "./assets/queen.jpg";
 import sculptor from "./assets/sculptor.jpg";
+const guessedCharacters = [];
 
 const App = () => {
   const [score, setScore] = useState(0);
-  //const [guessedCharacters, setGuess] = useState([]);
-  const guessedCharacters = [];
+  const [guessedCharactersList, setGuess] = useState([]);
   const [items, setList] = useState([
     { name: "Artist", image: artist },
     { name: "Baronness", image: baronness },
@@ -72,19 +72,70 @@ const App = () => {
   };
 
   let handleGuess = (e) => {
+  if (e.target.parentNode.className === "card-wrapper") {
+      let chosenCharacter = e.target.parentNode.childNodes[1].innerText;
+      const changes = guessedCharactersList.concat(chosenCharacter);
+      setGuess(changes);
+
+     
+
+
+
+
+
+  };}
+/*
+  let checkForMatch = (arr, guess) => {
+    console.log(arr[0]);
+    console.log(guess);
+      arr.includes(guess);
+    };
+*/
+  
+
+  useEffect(() => {
+
+    handleShuffle();
+
+
+
+
+
+    let mostRecent = guessedCharactersList[guessedCharactersList.length -1];
+if (guessedCharactersList.splice(0, guessedCharactersList.length - 1).includes(mostRecent)){
+
+
+  alert("You Lost!")
+}
+
+
+
+
+
+
+  }, [guessedCharactersList]);
+
+  
+
+
+
+/*
+
+function guessContentFunction (){
+
     if (e.target.parentNode.className === "card-wrapper") {
       let chosenCharacter = e.target.parentNode.childNodes[1].innerText;
       setScore(score + 1);
-      //  const changes = guessedCharacters.concat(chosenCharacter);
-      guessedCharacters.push(chosenCharacter);
-      console.log(guessedCharacters);
+      const changes = guessedCharactersList.concat(chosenCharacter);
+      setGuess(changes);
+    
+      if ((checkForMatch(guessedCharactersList, chosenCharacter))) {
+        alert("You Lost");
+      } else {
+        handleShuffle();
+      }
     }
-  };
-
-  let checkForMatch = (arr, guess) => {
-    return 2;
-  };
-
+  }*/
   return (
     <div className="App">
       <button onClick={handleShuffle}>Randomize</button>
