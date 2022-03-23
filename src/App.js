@@ -29,6 +29,8 @@ const guessedCharacters = [];
 
 const App = () => {
   const [score, setScore] = useState(0);
+  const [lossOrWin, setResult] = useState(false);
+
   const [guessedCharactersList, setGuess] = useState([]);
   const [items, setList] = useState([
     { name: "Artist", image: artist },
@@ -72,54 +74,41 @@ const App = () => {
   };
 
   let handleGuess = (e) => {
-  if (e.target.parentNode.className === "card-wrapper") {
+    if (e.target.parentNode.className === "card-wrapper") {
       let chosenCharacter = e.target.parentNode.childNodes[1].innerText;
       const changes = guessedCharactersList.concat(chosenCharacter);
       setGuess(changes);
+      console.log(changes);
+    }
+  };
 
-     
+ /* useEffect(() => {
+   const changes = [];
+      setGuess(changes);
+    setScore(0);
 
+  }, [lossOrWin]);*/
 
-
-
-
-  };}
-/*
-  let checkForMatch = (arr, guess) => {
-    console.log(arr[0]);
-    console.log(guess);
-      arr.includes(guess);
-    };
-*/
-  
 
   useEffect(() => {
 
-    handleShuffle();
+    let mostRecent = guessedCharactersList[guessedCharactersList.length - 1];
+    if (
+      guessedCharactersList
+        .splice(0, guessedCharactersList.length - 1)
+        .includes(mostRecent)
+    ) {
+      
+      alert("You Lost!");
+      setResult(!lossOrWin)
+    } else {
+      handleShuffle();
+      setScore(score+1);
 
-
-
-
-
-    let mostRecent = guessedCharactersList[guessedCharactersList.length -1];
-if (guessedCharactersList.splice(0, guessedCharactersList.length - 1).includes(mostRecent)){
-
-
-  alert("You Lost!")
-}
-
-
-
-
-
-
+    }
   }, [guessedCharactersList]);
 
-  
-
-
-
-/*
+  /*
 
 function guessContentFunction (){
 
