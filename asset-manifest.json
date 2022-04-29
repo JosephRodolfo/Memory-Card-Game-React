@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Memory-Card-Game-React-Hooks/static/css/main.be9f26f7.css",
+    "main.js": "/Memory-Card-Game-React-Hooks/static/js/main.cb135ea9.js",
+    "static/js/787.d6a8b40f.chunk.js": "/Memory-Card-Game-React-Hooks/static/js/787.d6a8b40f.chunk.js",
+    "static/media/missionary.png": "/Memory-Card-Game-React-Hooks/static/media/missionary.9270008f816e2f3d5742.png",
+    "static/media/king.jpg": "/Memory-Card-Game-React-Hooks/static/media/king.ee0c656e35cc177c5777.jpg",
+    "static/media/Eczar-Medium.ttf": "/Memory-Card-Game-React-Hooks/static/media/Eczar-Medium.3ad70f61157da42cd093.ttf",
+    "static/media/countess.jpg": "/Memory-Card-Game-React-Hooks/static/media/countess.bf9d2cdc74d3d4fb47da.jpg",
+    "static/media/engineer.jpg": "/Memory-Card-Game-React-Hooks/static/media/engineer.54766727e558fe0ed0c2.jpg",
+    "static/media/playright.jpg": "/Memory-Card-Game-React-Hooks/static/media/playright.7f1addda85f29d2bf7ee.jpg",
+    "static/media/queen.jpg": "/Memory-Card-Game-React-Hooks/static/media/queen.06eb081126089ac82aea.jpg",
+    "static/media/carthusian.jpg": "/Memory-Card-Game-React-Hooks/static/media/carthusian.81e07efea0a11aab0290.jpg",
+    "static/media/merchant.jpg": "/Memory-Card-Game-React-Hooks/static/media/merchant.767879c74cf994041745.jpg",
+    "static/media/model.jpg": "/Memory-Card-Game-React-Hooks/static/media/model.0b7e6c1265c0fda7e63d.jpg",
+    "static/media/guitarist.jpg": "/Memory-Card-Game-React-Hooks/static/media/guitarist.32ec067db068d8b17d45.jpg",
+    "static/media/thinker.jpg": "/Memory-Card-Game-React-Hooks/static/media/thinker.3c833844f428cf7d511d.jpg",
+    "static/media/lawyer.jpg": "/Memory-Card-Game-React-Hooks/static/media/lawyer.86cc12a63270923eedd1.jpg",
+    "static/media/importer.jpg": "/Memory-Card-Game-React-Hooks/static/media/importer.f3011a8dc5f0c71abad8.jpg",
+    "static/media/president.jpg": "/Memory-Card-Game-React-Hooks/static/media/president.9c59eb8ea7e46ce2549b.jpg",
+    "static/media/artist.jpg": "/Memory-Card-Game-React-Hooks/static/media/artist.83dc4f1b51b76679548f.jpg",
+    "static/media/baronness.jpg": "/Memory-Card-Game-React-Hooks/static/media/baronness.37a732870db988997b9d.jpg",
+    "static/media/daughter.jpg": "/Memory-Card-Game-React-Hooks/static/media/daughter.8d9490e02f6904075c4d.jpg",
+    "static/media/botanist.jpg": "/Memory-Card-Game-React-Hooks/static/media/botanist.67c8bf2684d1293a1a9e.jpg",
+    "static/media/sculptor.jpg": "/Memory-Card-Game-React-Hooks/static/media/sculptor.9516cf42f6888b50871a.jpg",
+    "static/media/monarch.jpg": "/Memory-Card-Game-React-Hooks/static/media/monarch.6fad04ed99f295cccc59.jpg",
+    "static/media/comtesse.jpg": "/Memory-Card-Game-React-Hooks/static/media/comtesse.d5d28c406cf3e3ff7d84.jpg",
+    "static/media/cleric.jpg": "/Memory-Card-Game-React-Hooks/static/media/cleric.014f4793fa784791f7d4.jpg",
+    "index.html": "/Memory-Card-Game-React-Hooks/index.html",
+    "main.be9f26f7.css.map": "/Memory-Card-Game-React-Hooks/static/css/main.be9f26f7.css.map",
+    "main.cb135ea9.js.map": "/Memory-Card-Game-React-Hooks/static/js/main.cb135ea9.js.map",
+    "787.d6a8b40f.chunk.js.map": "/Memory-Card-Game-React-Hooks/static/js/787.d6a8b40f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be9f26f7.css",
+    "static/js/main.cb135ea9.js"
+  ]
+}
