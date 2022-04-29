@@ -2,6 +2,7 @@
   "name": "memory-card",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://josephrodolfo.github.io/Memory-Card-Game-React-Hooks/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
@@ -12,9 +13,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
